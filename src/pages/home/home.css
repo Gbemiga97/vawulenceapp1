@@ -1,0 +1,269 @@
+.home__header{
+    height: calc(100% - 14rem);
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    margin-top: 14rem;
+    
+}
+
+.home__header-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+
+}
+
+.home__header-left{
+  margin-top: -3rem;
+}
+
+.home__header-left h4{
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.home__header-left p{
+    margin: 1rem 0 3.5rem;
+    font-size: 1.1rem;
+}
+
+.home__header-right{
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.home__header-circle{
+    height: 25rem;
+    width: 25rem;
+    background: linear-gradient(75deg, var(--color-secondary), transparent);
+    position: absolute; 
+    border-radius: 50%;
+    filter: blur(15px);
+}
+.home__header-image{
+    position: relative;
+}
+
+        /* PROGRAMS */
+.programs__container{
+    margin-top: 15rem;
+}
+.programs__wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin: 10rem 0;
+}
+
+.programs__wrapper a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.programs__program:hover a{
+    background: var(--color-secondary);
+}
+
+        /* VALUES */
+
+.values__container{
+    display: grid;
+    grid-template-columns: 38%  50%;
+    gap: 12%;
+}
+
+.values__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.4rem 2.4rem;
+    margin-top: 2rem;
+}
+.card.values__value {
+    padding-top: 3.5rem;
+    position: relative;
+}
+
+.card.values__value span{
+    position: absolute;
+    top: -1.5rem;
+}
+.values__right > p{
+    margin: 1.5rem 0 5rem;
+}
+.values__image{
+    filter: saturate(0.2);
+    transition: var(--transition);
+}
+
+.values__image:hover{
+    filter: saturate(1);
+}
+
+        /* FAQs */
+
+.faqs__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 6rem 0;
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+}
+
+.faq{
+    background: var(--color-gray-500);
+    padding: 2rem;
+    border-radius: 1rem ;
+    cursor: pointer;
+}
+
+.faq > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq button{
+    background: transparent;
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.faq p{
+    margin-top: 1.5rem;
+}
+
+            /* TESTIMONIALS */
+.testimonials__head{
+    justify-content: center;
+}
+.testimonials{
+    width: 50rem ;
+    margin-inline: auto;
+}
+
+.card.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 5rem;
+}
+.testimonial__avatar{
+    position: absolute;
+    top: -2rem;
+    left: calc(50% - 2rem);
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid transparent;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card.testimonial:hover .testimonial__avatar{
+    border-radius: 50%;
+    border-color: var(--color-gray-400);
+}
+
+.testimonials__btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 0.6em;
+}
+.testimonials__btn-container .testimonials__btn{
+    background: transparent;
+    cursor: pointer;
+}
+
+ .testimonials__btn svg{
+    font-size: 1.8rem;
+    fill: var(--color-primary);
+    height: 3rem;
+    width: 3rem;
+}
+
+
+
+
+
+
+
+
+
+            /* MEDIA QUERIES (medium screen) */
+
+@media screen and (max-width: 1024px) {
+   .home__header{
+    height: fit-content;
+    padding: 12rem 0;
+    margin-top: 3rem;
+   }
+   .home__header-container{
+    gap: 0;
+   }
+   .home__header-circle{
+    height: 18rem;
+    width: 18rem;
+   }
+
+        /* PROGRAMS */
+    .programs__wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+
+        /* VALUES */
+    .values__container{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .values__wrapper{
+        gap: 4rem 3rem;
+    }
+
+        /* FAQs */
+    .faqs__wrapper{
+        grid-template-columns: 1fr;
+    }
+
+        /* TESTIMONIALS */
+    .testimonials{
+        width: 75%;
+    }
+}
+
+
+  /* MEDIA QUERIES (small screen) */
+
+  @media screen and (max-width: 600px) {
+    .home__header-container {
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
+    }
+    .home__header-right{
+        display: none;
+    }
+
+        /* PROGRAMS */
+    .programs__wrapper{
+        grid-template-columns: 1fr;
+    }
+
+        /* VALUES */
+    .values__wrapper{
+        grid-template-columns: 1fr;
+    }
+            /* TESTIMONIALS */
+    .testimonials{
+        width: 100%;
+    }
+  }
+

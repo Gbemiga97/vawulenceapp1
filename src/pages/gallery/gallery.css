@@ -1,0 +1,28 @@
+.gallery__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+.gallery__container article{
+    padding: 1rem;
+    transition: var(--transition);
+}
+.gallery__container article:hover{
+    background: var(--color-gray-500);
+}
+
+        /* MEDIA QUERIES (medium screen) */
+    
+@media screen and (max-width: 1024px) {
+    .gallery__container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+        /* MEDIA QUERIES (small screen) */
+    
+        @media screen and (max-width: 600px) {
+            .gallery__container{
+                grid-template-columns: 1fr ;
+            }
+        }
