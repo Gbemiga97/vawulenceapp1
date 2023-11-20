@@ -11,7 +11,7 @@ const [showMenu, setShowMenu] = useState(false)
   return (
     <nav>
       <div className="container nav__container">
-        <Link to='/' 
+        <Link to='/home' 
         className='logo'
         onClick={() => setShowMenu(false)}
         >
